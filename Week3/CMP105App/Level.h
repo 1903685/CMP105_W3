@@ -11,6 +11,15 @@ public:
 	Level(sf::RenderWindow* hwnd, Input* in);
 	~Level();
 
+	sf::CircleShape circle;
+	float speed1;
+	sf::CircleShape circle1;
+	float speed;
+	sf::CircleShape circle2;
+	float speed2;
+
+	bool isMovingRight;
+	bool isMovingUp;
 	void handleInput(float dt);
 	void update(float dt);
 	void render();
@@ -20,7 +29,10 @@ private:
 	void beginDraw();
 	void endDraw();
 
+	
+
 	// Default variables for level class.
 	sf::RenderWindow* window;
 	Input* input;
+	
 };
